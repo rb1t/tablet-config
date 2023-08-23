@@ -21,7 +21,6 @@ The following apply to the Huion GT-156HD V2, so you'll unfortunately have to fi
 
 | Krita cmd                  | Description                                   | xsetwacom --list devices       | button id | Cmd                                                                     |
 | -------------------------- | --------------------------------------------- | ------------------------------ | --------- | ----------------------------------------------------------------------- |
-| N/A                        | Wait a few seconds for system to boot         | N/A                            |           | sleep 10                                                                |
 | N/A                        | Define the drawing area                       | Tablet Monitor Pen stylus      |           | xsetwacom set "Tablet Monitor Pen stylus" Area 0 0 69000 39000          |
 | N/A                        | Map tablet to monitor                         | Tablet Monitor Pen stylus      |           | xsetwacom set "Tablet Monitor Pen stylus" MapToOutput HEAD-1            |
 | Undo                       | Top dial, left button                         | Tablet Monitor Pad pad         | 2         | xsetwacom set "Tablet Monitor Pad pad" Button "2" "key +ctrl +z"        |
