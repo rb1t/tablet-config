@@ -12,8 +12,8 @@ Manually run the script, or set to start with your login scripts.
 
 ### Important calibration notes
 
-- The `xsetwacom set "Tablet Monitor Pen stylus" Area 0 0 69000 39000` command is what calibrates the pen to the tablet screen area. It uses values relative to the screen's resolution/area. I couldn't find a sensible equation for a "sweet spot", so I just tinkered with these values until I got something fairly accurate (i.e., the mouse/cursor is consistently following the pen movement).
-- Regarding `xsetwacom set "Tablet Monitor Pen stylus" MapToOutput HEAD-1` (which maps the pen to the screen you will draw on): generally the syntax is, `xsetwacom set "Device Name" MapToOutput "Monitor"` however this was not working for me when using the devices name. I discovered this was caused by Nvidia's proprietary driver and the solution is to instead use `HEAD-1` as the monitor name, per: https://wiki.archlinux.org/title/Graphics_tablet#Mapping_the_tablet_to_a_monitor
+- The `xsetwacom set "Tablet Monitor Pen stylus" Area 0 0 69000 39000` command is what calibrates the pen to the tablet's screen area. It uses values relative to the screen's resolution/area. I couldn't find a sensible equation for a "sweet spot", so I just tinkered with these values until I got something fairly accurate (i.e., the mouse/cursor is consistently following the pen movement).
+- Regarding `xsetwacom set "Tablet Monitor Pen stylus" MapToOutput HEAD-1` (which binds the screen device and pen device together): generally the syntax is, `xsetwacom set "Device Name" MapToOutput "Monitor"` however this was not working for me when using the devices name. I discovered this was caused by Nvidia's proprietary driver and the solution is to instead use `HEAD-1` as the monitor name, per: https://wiki.archlinux.org/title/Graphics_tablet#Mapping_the_tablet_to_a_monitor
 
 ### Customizing / Mapping notes
 
