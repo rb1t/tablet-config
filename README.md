@@ -17,7 +17,7 @@ Manually run the script, or set to start with your login scripts.
 
 ### Customizing / Mapping notes
 
-The following are my own custom mappings, and apply to the Huion GT-156HD V2. If using a different device, you'll likely need to figure out your own mappings by pressing each button one-by-one. Creating a spreadsheet can help (what I did here). I've also included their corresponding commands in Krita. This table corresponds with the `tablet_setup.sh`.
+The following are my own custom mappings for the Huion GT-156HD V2. If using a different device, you'll likely need to figure out your own mappings by pressing each button one-by-one. Creating a spreadsheet can help (what I did here). I've also included their corresponding commands in Krita. This table corresponds with the `tablet_setup.sh`.
 
 | Krita cmd                  | Description                                   | xsetwacom --list devices       | button id | Cmd                                                                     |
 | -------------------------- | --------------------------------------------- | ------------------------------ | --------- | ----------------------------------------------------------------------- |
