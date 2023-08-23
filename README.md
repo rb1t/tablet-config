@@ -55,7 +55,9 @@ Manually run the script, or set to start with your login scripts.
       
 - List physical devices and their ids: `xsetwacom --list devices` e.g., it might show something like:
     > Tablet Monitor Pad pad
+    
     > Tablet Monitor Pen stylus				
+    
     > Tablet Monitor Touch Strip pad				
 
 - Print current mapping: `xsetwacom get [...]` e.g.,
