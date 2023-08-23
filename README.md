@@ -53,13 +53,13 @@ Manually run the script, or set to start with your login scripts.
     - get `evtest` and run `sudo evtest`. This will let you select your device(s) from a list, and then you can press keys to see their ids. It will look something ike, "BTN_3", to which you would only use the value "3".
     - creating a spreadsheet can help to track your button ids and what device they live on (as I did above). When finished, simply update the script to include your button ids, and device names.
       
-- List physical devices and their ids: `xsetwacom --list devices` e.g.,
-    - Tablet Monitor Pad pad
-    - Tablet Monitor Pen stylus				
-    - Tablet Monitor Touch Strip pad				
+- List physical devices and their ids: `xsetwacom --list devices` e.g., it might show something like:
+    > Tablet Monitor Pad pad
+    > Tablet Monitor Pen stylus				
+    > Tablet Monitor Touch Strip pad				
 
 - Print current mapping: `xsetwacom get [...]` e.g.,
-    - `xsetwacom get "Tablet Monitor Pad pad" Button 1` will print, `key +e` (i.e., the 'e' key)
+    - `xsetwacom get "Tablet Monitor Pad pad" Button 1` will print, "key +e" (i.e., the 'e' key) using the mappings above.
  
 - Show display devices: `xrandr`
 
