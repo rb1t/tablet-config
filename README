@@ -1,0 +1,5 @@
+This script manually calibrates the pen and tablet drawing area/screen, and maps the various buttons.
+
+Requirements:
+- xsetwacom
+- ...
