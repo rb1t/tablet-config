@@ -5,6 +5,7 @@ _NOTE: This has only been tested on a Huion GT-156HD V2, using Arch Linux and KD
 ### Requirements:
 
 - `xsetwacom`
+- `evtest`
 
 ### Usage
 
@@ -17,9 +18,10 @@ Manually run the script, or set to start with your login scripts.
 
 ### Customizing / Mapping notes
 
-The following are my own custom mappings for the Huion GT-156HD V2. If using a different device, you'll likely need to figure out your own mappings by pressing each button one-by-one. Creating a spreadsheet can help (what I did here). I've also included their corresponding commands in Krita. This table corresponds with the `tablet_setup.sh`.
+- The following are my own custom mappings for the Huion GT-156HD V2. I've included which device the button exists on under the `xsetwacom --list devices` column. I've also included their corresponding commands in Krita. _This table corresponds with the script, `tablet_setup.sh`._
+- If you are using a different tablet, you'll likely need to figure out your own mappings and update the script accordingly. The `evtest` tool can help (see `Handy commands` below).
 
-| Krita cmd                  | Description                                   | xsetwacom --list devices       | button id | Cmd                                                                     |
+| Krita cmd                  | Description                                   | `xsetwacom --list devices`       | button id | Cmd                                                                     |
 | -------------------------- | --------------------------------------------- | ------------------------------ | --------- | ----------------------------------------------------------------------- |
 | N/A                        | Define the drawing area                       | Tablet Monitor Pen stylus      |           | xsetwacom set "Tablet Monitor Pen stylus" Area 0 0 69000 39000          |
 | N/A                        | Map tablet to monitor                         | Tablet Monitor Pen stylus      |           | xsetwacom set "Tablet Monitor Pen stylus" MapToOutput HEAD-1            |
@@ -43,6 +45,10 @@ The following are my own custom mappings for the Huion GT-156HD V2. If using a d
 | color dropper              | Further from tip                              | Tablet Monitor Pen stylus      | 3         | xsetwacom set "Tablet Monitor Pen stylus" Button "3" "key +p"           |
 
 ### Handy commands
+
+- To figure out what your button ids your device(s) use, and to do your own mapping:
+    - get `evtest` and run `sudo evtest`. This will let you select your device(s) from a list, and then you can press keys to see their ids.
+    - creating a spreadsheet can help to track your button ids and what device they live on (as I did above)
 
 - List physical devices and their ids: `xsetwacom --list devices` e.g.,
     - Tablet Monitor Pad pad
