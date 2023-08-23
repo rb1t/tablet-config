@@ -1,6 +1,6 @@
-This script manually calibrates the pen and tablet drawing area, and maps the various buttons.
+This script uses xsetwacom to manually calibrate a drawing tablet's pen and screen area, and also sets the button mapping.
 
-_NOTE: This has only been tested on a Huion using Arch Linux and KDE X11. But it should work on any Linux system. It should also work on any tablet, but you will likely need to re-map the buttons_
+_NOTE: This has only been tested on a Huion GT-156HD V2, using Arch Linux and KDE X11; but it should work on any Linux system. It should also work on any tablet, but you will likely need to re-map the buttons._
 
 ### Requirements:
 
@@ -8,7 +8,11 @@ _NOTE: This has only been tested on a Huion using Arch Linux and KDE X11. But it
 
 ### Usage
 
-Manually run the script, or set to start with your login scripts
+Manually run the script, or set to start with your login scripts.
+
+### Known issues
+
+- The touch strip / slider doesn't appear to be woriking properly.
 
 ### Customizing / Mapping notes
 
@@ -36,18 +40,17 @@ The following apply to the Huion GT-156HD V2, so you'll unfortunately have to fi
 | Brush select (right click) | Bottom dial, center button                    | Tablet Monitor Pad pad         | 16        | xsetwacom set "Tablet Monitor Pad pad" Button "16" "button 3"           |
 | N/A                        | Pen tip (don't override this, let it default) | Tablet Monitor Pen stylus      | 1         | N/A                                                                     |
 | Brush tool                 | Closer to tip                                 | Tablet Monitor Pen stylus      | 2         | xsetwacom set "Tablet Monitor Pen stylus" Button "2" "key +b"           |
-| color droPper              | Further from tip                              | Tablet Monitor Pen stylus      | 3         | xsetwacom set "Tablet Monitor Pen stylus" Button "3" "key +p"           |
-
+| color dropper              | Further from tip                              | Tablet Monitor Pen stylus      | 3         | xsetwacom set "Tablet Monitor Pen stylus" Button "3" "key +p"           |
 
 ### Handy commands
 
-- List physical devices and thteir ids: `xsetwacom --list devices` e.g.,
+- List physical devices and their ids: `xsetwacom --list devices` e.g.,
     - Tablet Monitor Pad pad
     - Tablet Monitor Pen stylus				
     - Tablet Monitor Touch Strip pad				
 
 - Print current mapping: `xsetwacom get [...]` e.g.,
-    - `xsetwacom get "Tablet Monitor Pad pad" Button 1`
+    - `xsetwacom get "Tablet Monitor Pad pad" Button 1` will print, `key +e` (i.e., the 'e' key)
 
 ### Resources
 	
