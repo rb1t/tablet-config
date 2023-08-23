@@ -46,9 +46,10 @@ Manually run the script, or set to start with your login scripts.
 
 ### Handy commands
 
-- To figure out what your button ids your device(s) use, and to do your own mapping:
+- To figure out what your button ids are on each device (and to do your own mapping):
     - get `evtest` and run `sudo evtest`. This will let you select your device(s) from a list, and then you can press keys to see their ids.
-    - creating a spreadsheet can help to track your button ids and what device they live on (as I did above)
+    - creating a spreadsheet can help to track your button ids and what device they live on (as I did above). When finished, simply update the script to include your button ids, and device names.
+      
 
 - List physical devices and their ids: `xsetwacom --list devices` e.g.,
     - Tablet Monitor Pad pad
