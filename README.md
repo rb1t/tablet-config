@@ -10,9 +10,10 @@ _NOTE: This has only been tested on a Huion GT-156HD V2, using Arch Linux and KD
 
 Manually run the script, or set to start with your login scripts.
 
-### Known issues
+### Important calibration notes
 
-- The touch strip / slider doesn't appear to be woriking properly.
+- The `xsetwacom set "Tablet Monitor Pen stylus" Area 0 0 69000 39000` command is what calibrates the pen to the tablet screen area. It uses values relative to the screen's resolution/area. I couldn't find a sensible equation for a "sweet spot", so I just tinkered with these values until I got something fairly accurate (i.e., the mouse/cursor is consistently following the pen movement).
+- Regarding `xsetwacom set "Tablet Monitor Pen stylus" MapToOutput HEAD-1` (which maps the pen to the screen you will draw on): generally the syntax is, `xsetwacom set "Device Name" MapToOutput "Monitor"` however this was not working for me when using the devices name. I discovered this was caused by Nvidia's proprietary driver and the solution is to instead use `HEAD-1` as the monitor name, per: https://wiki.archlinux.org/title/Graphics_tablet#Mapping_the_tablet_to_a_monitor
 
 ### Customizing / Mapping notes
 
@@ -51,7 +52,9 @@ The following apply to the Huion GT-156HD V2, so you'll unfortunately have to fi
 
 - Print current mapping: `xsetwacom get [...]` e.g.,
     - `xsetwacom get "Tablet Monitor Pad pad" Button 1` will print, `key +e` (i.e., the 'e' key)
+ 
+- Show display devices: `xrandr`
 
-### Resources
-	
-- https://wiki.archlinux.org/title/Graphics_tablet#Mapping_the_tablet_to_a_monitor				
+### Known issues
+
+- The touch strip / slider doesn't appear to be woriking properly.
