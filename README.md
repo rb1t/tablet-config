@@ -12,14 +12,14 @@ _NOTE: This has only been tested on a Huion GT-156HD V2, using Arch Linux and KD
 
 ### Usage
 
-Manually run the script, or set to start with your login scripts.
+After customizing Calibration and Button Mapping for your device, manually run the script or set it to start with your login scripts.
 
-### Important calibration notes
+### Calibration
 
 - The `xsetwacom set "Tablet Monitor Pen stylus" Area 0 0 69000 39000` command is what calibrates the pen to the tablet's screen area. It uses values relative to the screen's resolution/area. I couldn't find a sensible equation for a "sweet spot", so I just tinkered with these values until I got something fairly accurate (i.e., the mouse/cursor is consistently following the pen movement).
 - Regarding `xsetwacom set "Tablet Monitor Pen stylus" MapToOutput HEAD-1` (which binds the screen device and pen device together): generally the syntax is, `xsetwacom set "Device Name" MapToOutput "Monitor"` however this was not working for me when using the devices name. I discovered this was caused by Nvidia's proprietary driver and the solution is to instead use `HEAD-1` as the monitor name, per: https://wiki.archlinux.org/title/Graphics_tablet#Mapping_the_tablet_to_a_monitor
 
-### Customizing / Mapping notes
+### Button Mapping
 
 - The following are my own custom mappings for the Huion GT-156HD V2. I've included which device the button exists on under the `xsetwacom --list devices` column. I've also included their corresponding commands in Krita. _This table corresponds with the script, `tablet_setup.sh`._
 - If you are using a different tablet, you'll likely need to figure out your own mappings and update the script accordingly. The `evtest` tool can help (see `Handy commands` below).
