@@ -9,6 +9,7 @@ _NOTE: This has only been tested on a Huion GT-156HD V2, using Arch Linux and KD
 ### Recommended:
 
 - `evtest`
+- `xrandr`
 
 ### Usage
 
