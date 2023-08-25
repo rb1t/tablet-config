@@ -13,7 +13,7 @@ _NOTE: This has only been tested on a Huion GT-156HD V2, using Arch Linux and KD
 
 ### Usage
 
-After customizing Calibration and Button Mapping for your device, manually run the script or set it to start with your login scripts.
+After customizing the _Calibration_ and _Button Mapping_ for your device, manually run the shell script when you want to use your tablet, or add the script to run at start-up.
 
 ### Calibration
 
