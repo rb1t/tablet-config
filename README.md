@@ -1,4 +1,4 @@
-This script uses xsetwacom to manually calibrate a drawing tablet's pen and screen area, and also set the button mapping.
+This script uses `xsetwacom` to manually calibrate a drawing tablet's pen and screen area, and also set the button mapping.
 
 _NOTE: This has only been tested on a Huion GT-156HD V2, using Arch Linux and KDE X11; but it should work on any Linux system. It should also work on any tablet, but you will likely need to re-map the buttons._
 
